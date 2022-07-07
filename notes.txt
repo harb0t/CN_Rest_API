@@ -1,0 +1,7 @@
+!user = if not user 
+
+get and delte does not accept body - it accepts request
+
+middleware is to intercpts requests before we run controller
+
+to hash something = to hide something
