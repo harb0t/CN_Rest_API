@@ -17,11 +17,13 @@ POST: http://localhost:5001/user
 
 BODY:
 
+```
 {
 "username": "Mx. Example",
 "email" : "example@email.com",
  "password": "example123"
 }
+```
 
 __________________________________________________
 
@@ -30,10 +32,12 @@ POST: http://localhost:5001/login
 
 BODY:
 
+```
 {
 "username": "Mx. Example",
  "password": "example123"
 }
+```
 
 __________________________________________________
 
@@ -52,16 +56,17 @@ PATCH:http://localhost:5001/user/
 
 BODY:
 
+```
 {
-    "userObj": {
+    "userObj": { /n
     "username":>>"write username here"<<},
 
-    "updateObj": {
+    "updateObj": { /n
     "email" : >>"updated email here"<<,
     "password" : >>"updated password here"<<
 }
 }
-
+```
 __________________________________________________
 
 #### Remove user
