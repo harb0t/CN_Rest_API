@@ -14,6 +14,7 @@ __________________________________________________
 
 #### Add entry to database
 POST: http://localhost:5001/user
+
 BODY:
 
 {
@@ -28,6 +29,7 @@ __________________________________________________
 POST: http://localhost:5001/login
 
 BODY:
+
 {
 "username": "Mx. Example",
  "password": "example123"
@@ -38,9 +40,10 @@ __________________________________________________
 #### Find details on specific user
 GET: http://localhost:5001/user/>>>input username here<<
 
-####Show all users and details
-GET: http://localhost:5001/findaALL
+__________________________________________________
 
+#### Show all users and details
+GET: http://localhost:5001/findaALL
 
 __________________________________________________
 
@@ -48,6 +51,7 @@ __________________________________________________
 PATCH:http://localhost:5001/user/
 
 BODY:
+
 {
     "userObj": {
     "username":>>"write username here"<<},
