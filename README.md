@@ -4,7 +4,10 @@ This is the repository for Code Nation’s REST API activity. The activity looke
 
 ## How do I RUN this?
 From the root folder run **‘npm install’** to download of dependencies. To run the server type **node src /server.js**
-You will need to create a .env file in the src folder and have your connection string within the file like so:  **MONGO_URI = >>>your connection string here<<<**
+You will need to create a .env file in the src folder and have your connection string within the file like so:  
+```
+MONGO_URI = >>>your connection string here<<<
+```
 
 ## How do I USE this?
 
