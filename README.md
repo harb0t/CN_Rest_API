@@ -43,7 +43,7 @@ GET: http://localhost:5001/user/>>>input username here<<
 __________________________________________________
 
 #### Show all users and details
-GET: http://localhost:5001/findaALL
+GET: http://localhost:5001/findAll
 
 __________________________________________________
 
