@@ -1,0 +1,27 @@
+????????????????????????????????
+
+ JSON web token notes
+you can put anything in them
+
+npm i jsonwebtoken
+const jwt = require("jsonwebtoken");
+const token = jwt.sign(payload,secretOrPrivateKey);
+payload is the contents of the key, key is the secret used to disguise it
+payload = {id:userFromMyDb._id}
+secretOrPrivateKey = "Random String Combination";
+console.log(token);
+exports.tokenCheck = async (res,req,next) => {
+    try{
+        const decodedToken = jwt.verify(token, "Random String Combination");
+        next();
+    } catch(error){
+        console.log(error);
+        res.send({error});
+    }
+}
+
+Authorization header needs to be the key
+const token = req.header("Authorization");
+const user = await User.findOne({_id:decodedToken.id);
+req.user = user;
+
