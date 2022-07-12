@@ -61,10 +61,10 @@ BODY:
 
 ```
 {
-    "userObj": { /n
+    "userObj": {
     "username":>>"write username here"<<},
 
-    "updateObj": { /n
+    "updateObj": {
     "email" : >>"updated email here"<<,
     "password" : >>"updated password here"<<
 }

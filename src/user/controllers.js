@@ -81,16 +81,16 @@ exports.update = async (req, res) => {
         req.body.userObj,
         req.body.updateObj
     );
-    if (!userUpdates) {
-        throw new Error("User not found");
-    } else {
-        res.send({ userUpdates });
-    }
+    if (result.modifiedCount > 0) {
+        res.status(200).send({ msg: "Successfully Updated" });
+      } else {
+        throw new Error({ msg: "Something went wrong" });
+      }
     } catch (error) {
-    console.log(error);
-    res.send({ error });
+      console.log(error);
+      res.send({ error });
     }
-};
+  };
 
   // delete: take username and delete the user
 exports.delUser = async (req, res) => {
@@ -106,3 +106,27 @@ exports.delUser = async (req, res) => {
       res.send({ error });
     }
   };
+
+
+
+
+
+//   shhhhhhhhhhh ignore this old stuff below
+
+  // update: take username and edit the email address and password
+//   exports.update = async (req, res) => {
+//     try {
+//     const userUpdates = await User.updateOne(
+//         req.body.userObj,
+//         req.body.updateObj
+//     );
+//     if (!userUpdates) {
+//         throw new Error("User not found");
+//     } else {
+//         res.send({ userUpdates });
+//     }
+//     } catch (error) {
+//     console.log(error);
+//     res.send({ error });
+//     }
+// };

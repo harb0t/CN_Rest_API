@@ -11,12 +11,22 @@ const app = express();
 const port = process.env.PORT || 5001;
 
 
+// -------------NEW (need notes)
+const cors = require("cors");
+
+
+
 // ORDER BELOW V IMPORTANT
 
 // only after nxt line has express access to json
 // parses all requests as if they are JSON sends all responses as JSON
 app.use(express.json());
 // .use to ADD things to server so it can be USED
+
+
+// -------------NEW (need notes)
+app.use(cors());
+
 
 
 // USERROUTER REQUIRES ABOVE LINE FIRST TO RUN JSON DATA
