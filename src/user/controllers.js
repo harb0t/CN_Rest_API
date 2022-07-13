@@ -75,13 +75,14 @@ exports.findAll = async (req, res) => {
 };
 
   // update: take username and edit the email address and password
-exports.update = async (req, res) => {
+  exports.update = async (req, res) => {
     try {
-    const userUpdates = await User.updateOne(
+      const userUpdates = await User.updateOne(
         req.body.userObj,
         req.body.updateObj
-    );
-    if (result.modifiedCount > 0) {
+      );
+  
+      if (userUpdates.modifiedCount > 0) {
         res.status(200).send({ msg: "Successfully Updated" });
       } else {
         throw new Error({ msg: "Something went wrong" });
@@ -90,7 +91,7 @@ exports.update = async (req, res) => {
       console.log(error);
       res.send({ error });
     }
-  };
+};
 
   // delete: take username and delete the user
 exports.delUser = async (req, res) => {
